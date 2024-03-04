@@ -1,0 +1,703 @@
+<nav class="navbar navbar-expand-lg sticky-top navClass">
+  <div class="container">
+    <a class="navbar-brand"
+      ><img class="logo" src="assets\images\vinay-logo.avif" alt="Vinay Dangi"
+    /></a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" [ngClass]="{ show: isNavbarOpen }">
+      <ul class="navbar-nav ms-auto mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#project">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- header  -->
+
+<div id="home" class="mb-3">
+  <div class="container mt-lg-5">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="mt-5 pt-lg-5 ps-lg-5 text-header ms-lg-5">
+          <h1 class="pt-lg-5 text-header">
+            Front-End Angular <br />
+            <span style="color: rgb(255, 89, 0)">Developer</span>
+            <span
+              ><img
+                class="ms-2 mt-1 hand"
+                style="height: 50px; width: 50px"
+                src="assets\images\pngwing.com (1).png"
+                alt=""
+            /></span>
+          </h1>
+          <p class="para-header">
+            Hi, I'm Vinay Dangi. A Passionate Front-end Angular Developer <br />
+            based in India, Indore.
+          </p>
+
+          <p class="mt-1 fst-italic text-secondary" style="font-size: 14px">
+            " I'm not a great programmer, I'm just a good programmer with great
+            habits. " <span class="text-dark">-Kent Beck</span>
+          </p> 
+          <div class="mt-4 icons-service">
+            <span>
+              <i
+                class="bi bi-linkedin p-1 one-icon"
+                style="font-size: 2.5em"
+                (click)="onClickLinkedIn()"
+              ></i>
+            </span>
+            <span>
+              <i
+                class="bi bi-github p-3 sec-icon"
+                style="font-size: 2.5em"
+                (click)="onClickGit()"
+              ></i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div>
+          <img
+            class="img-fluid"
+            src="https://img.freepik.com/premium-vector/programmer-is-thinking-about-program-code-development-programming-coding-technologies_569013-329.jpg?w=2000"
+            alt=""
+          />
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pt-lg-5 pt-md-1" id="about">
+  <div class="container mt-1">
+    <section class="py-1 py-md-4">
+      <p class="text-center mb-0 pb-0">Get to know more</p>
+      <h1 class="text-center mb-0 pb-0 mb-4">ABOUT ME</h1>
+
+      <div class="container">
+        <div class="row align-items-lg-center">
+          <div class="col-12 col-lg-5 col-xl-5">
+            <img
+              class="img-fluid rounded"
+              loading="lazy"
+              src="https://img.freepik.com/premium-vector/programmer-concentrated-working-project-developing-programming-coding-technologies_569013-334.jpg?w=2000"
+              alt="About 1"
+            />
+          </div>
+          <div class="col-12 col-lg-7 col-xl-7">
+            <div class="row justify-content-xl-center">
+              <div class="col-12 col-xl-11">
+                <p class="mt-3 fst-italic">
+                  Hello there, I'm
+                  <span style="color: orangered">Vinay Dangi</span>, a
+                  passionate frontend developer skilled in creating dynamic and
+                  user friendly websites. With a deep-rooted love for
+                  JavaScript, Angular, HTML, CSS, and Bootstrap.
+                </p>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <!-- about.component.html -->
+
+                    <ul class="nav mt-3">
+                      <li
+                        class="px-1 mx-3"
+                        [ngClass]="{ active: activeTab === 'skills' }"
+                        (click)="setActiveTab('skills')"
+                      >
+                        <a>SKILLS</a>
+                      </li>
+                      <li
+                        class="px-1 mx-3"
+                        [ngClass]="{ active: activeTab === 'experience' }"
+                        (click)="setActiveTab('experience')"
+                      >
+                        <a>EXPERIENCE</a>
+                      </li>
+                      <li
+                        class="px-1 mx-3"
+                        [ngClass]="{ active: activeTab === 'education' }"
+                        (click)="setActiveTab('education')"
+                      >
+                        <a>EDUCATION</a>
+                      </li>
+                      <li
+                        class="px-1 mx-3"
+                        [ngClass]="{ active: activeTab === 'personal' }"
+                        (click)="setActiveTab('personal')"
+                      >
+                        <a>PERSONAL</a>
+                      </li>
+                    </ul>
+
+                    <div class="tab-content">
+                      <div *ngIf="activeTab === 'skills'">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12 col-lg-9">
+                              <div class="card mt-3 tab-card">
+                                <div class="card-header tab-card-header">
+                                  <div class="d-flex text-center flex-wrap">
+                                    <div class="mx-1 mt-2">
+                                      <img
+                                        style="height: 65px"
+                                        src="\assets\images\icons8-html-48.png"
+                                        alt=""
+                                      />
+                                    </div>
+                                    <div class="mx-1 mt-2">
+                                      <img
+                                        style="height: 65px"
+                                        src="\assets\images\icons8-css-48.png"
+                                        alt=""
+                                      />
+                                    </div>
+                                    <div class="mx-1 mt-2">
+                                      <img
+                                        style="height: 65px"
+                                        src="\assets\images\icons8-javascript-48.png"
+                                        alt=""
+                                      />
+                                    </div>
+                                    <div class="mx-1 mt-2">
+                                      <img
+                                        style="height: 65px"
+                                        src="\assets\images\icons8-angular-48.png"
+                                        alt=""
+                                      />
+                                    </div>
+                                    <div class="mx-1 mt-2">
+                                      <img
+                                        style="height: 65px"
+                                        src="\assets\images\icons8-bootstrap-48.png"
+                                        alt=""
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div *ngIf="activeTab === 'experience'">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12 col-lg-9">
+                              <div class="card mt-3 tab-card">
+                                <div class="card-header tab-card-header">
+                                  <h5 class="mt-2 ms-lg-3">
+                                    Digi-Chum Infotech
+                                  </h5>
+                                  <p class="ms-lg-3">( 3 months )</p>
+                                  <p
+                                    class="ms-lg-3 mt-3 fst-italic text-secondary"
+                                  >
+                                    - As an Angular Developer
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div *ngIf="activeTab === 'education'">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12 col-lg-9">
+                              <div class="card mt-3 tab-card">
+                                <div class="card-header tab-card-header">
+                                  <h6>Schools</h6>
+                                  <p
+                                    class="fst-italic text-secondary"
+                                    style="font-size: 14px"
+                                  >
+                                    Carmel Convent Higher Secondry School
+                                  </p>
+
+                                  <h6>College</h6>
+                                  <p
+                                    class="fst-italic text-secondary mb-0"
+                                    style="font-size: 14px"
+                                  >
+                                    Chameli Devi Institute Of Proffetional
+                                    Studies
+                                  </p>
+                                  <p
+                                    class="fst-italic text-secondary mt-lg-3"
+                                    style="font-size: 14px"
+                                  >
+                                    [ B.com CA ]
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div *ngIf="activeTab === 'personal'">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-md-12 col-lg-9">
+                              <div class="card mt-3 tab-card">
+                                <div class="card-header tab-card-header">
+                                  <div class="row">
+                                    <div class="col-md-8">
+                                      <h6 class="my-2">
+                                        Age :
+                                        <span class="text-secondary ms-2"
+                                          >21 year old</span
+                                        >
+                                      </h6>
+                                      <h6
+                                        class="my-2 d-none d-lg-block d-md-block"
+                                      >
+                                        Date of Birth :
+                                        <span class="text-secondary ms-2"
+                                          >14 May 2002</span
+                                        >
+                                      </h6>
+                                      <h6 class="my-2">
+                                        Location :
+                                        <span class="text-secondary ms-2"
+                                          >Tillore, Indore</span
+                                        >
+                                      </h6>
+                                      <h6
+                                        class="my-2 d-none d-lg-block d-md-block"
+                                      >
+                                        Nationality :
+                                        <span class="text-secondary ms-2"
+                                          >Indian</span
+                                        >
+                                      </h6>
+                                      <h6
+                                        class="my-2 d-none d-lg-block d-md-block"
+                                      >
+                                        Email :
+                                        <span
+                                          style="cursor: pointer"
+                                          class="text-primary ms-2"
+                                          (click)="onClicMail()"
+                                          >{{ "vinaydangi145@gmail.com" }}</span
+                                        >
+                                      </h6>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <div class="text-center">
+                                        <a
+                                          class="btn btn-squared-default mt-4"
+                                          style="
+                                            background-color: rgb(249, 109, 58);
+                                           "
+                                          (click)="downloadResume()"
+                                        >
+                                          <i
+                                            style="height: 50px; width: 50px"
+                                            class="bi bi-file-earmark-arrow-down-fill"
+                                          ></i>
+                                          <br />
+                                          Download Resume
+                                        </a>
+                                      </div>
+                                    </div> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>   
+                      </div>
+                    </div>
+
+                    <div class="ms-3 mt-5 d-flex mb-5 mb-lg-1 text-sm-center">
+                      <a href="#contact" class="letstalk" >
+                       
+                        <span
+                        > Hire Me  <i class="bi bi-briefcase-fill ms-1"></i>
+                      </span>
+                      
+                    </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="pt-lg-5 pt-md-1" id="project">
+  <div class="container">
+    <section class="py-1 py-md-4 mt-md-2">
+      <p class="text-center mb-0 pb-0">Browse my recent</p>
+      <h1 class="text-center mb-0 pb-0">PROJECTS</h1>
+
+      <div class="row mt-5 d-flex justify-content-center">
+        <div class="col-md-3 text-center">
+          <h5 class="mt-2" style="color: orangered">Todo-List App</h5>
+          <div class="project-card">
+            <div class="image">
+              <img
+                src="https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938727.jpg?size=626&ext=jpg&ga=GA1.1.1226609265.1697018571&semt=ais"
+              />
+            </div>
+            <div class="details">
+              <div class="center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-info"
+                    (click)="onTodoAppLive()"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+
+                <br />
+
+                <div>
+                  <button class="btn btn-outline-secondary">
+                    GitHub<i
+                      class="bi bi-github ps-2"
+                      style="font-size: 1em"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <h5 class="mt-2" style="color: orangered">Loundary App</h5>
+
+          <div class="project-card">
+            <div class="image">
+              <img
+                class="img-fluid"
+                src="https://img.freepik.com/free-photo/hands-using-smartphone-close-up_23-2148994131.jpg?size=626&ext=jpg&ga=GA1.1.1226609265.1697018571&semt=ais"
+              />
+            </div>
+            <div class="details">
+              <div class="center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-info"
+                    (click)="onWeatherLive()"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+
+                <br />
+
+                <div>
+                  <button class="btn btn-outline-secondary"
+                    (click)="onGitCode()">
+                    GitHub<i
+                      class="bi bi-github ps-2"
+                      style="font-size: 1em"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <h5 class="mt-2" style="color: orangered">Newspaper App</h5>
+
+          <div class="project-card">
+            <div class="image">
+              <img
+                class="img-fluid"
+                src="https://img.freepik.com/premium-photo/hands-man-holding-mobile-phone_107420-59954.jpg?size=626&ext=jpg&ga=GA1.1.1226609265.1697018571&semt=ais"
+              />
+            </div>
+
+            <div class="details">
+              <div class="center">
+                <div>
+                  <button type="button" class="btn btn-outline-info">
+                    Live Demo
+                  </button>
+                </div>
+
+                <br />
+
+                <div>
+                  <button class="btn btn-outline-secondary">
+                    GitHub<i
+                      class="bi bi-github ps-2"
+                      style="font-size: 1em"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 text-center">
+          <h5 class="mt-2" style="color: orangered">Weather App</h5>
+
+          <div class="project-card">
+            <div class="image">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1614480633894-f3b7f4bb0e76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2VhdGhlciUyMGFwcHxlbnwwfHwwfHx8MA%3D%3D"
+              />
+            </div>
+            <div class="details">
+              <div class="center">
+                <div>
+                  <button
+                    type="button"
+                    class="btn btn-outline-info"
+                    (click)="onWeatherApp()"
+                  >
+                    Live Demo
+                  </button>
+                </div>
+
+                <br />
+
+                <div>
+                  <button class="btn btn-outline-secondary">
+                    GitHub<i
+                      class="bi bi-github ps-2"
+                      style="font-size: 1em"
+                    ></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+ 
+<section class="py-1 py-md-3 mt-5" id="contact">
+  <p class="text-center mb-0 pb-0" style="margin-top: 85px;">Get in touch</p>
+  <h1 class="text-center mb-0 pb-0">CONTACT ME</h1>
+
+  <div class="container mt-5 mb-3 py-5 z-depth-1">
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-6 text-center"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-5 col-md-12 mb-0 mb-md-0">
+          <div id="map-container-google-1" class="z-depth-1 map-container mb-4 ">
+            <iframe
+            src="https://maps.google.com/maps?q=tollorebuzurg&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+              frameborder="0"
+              style="border: 0" 
+              allowfullscreen
+            ></iframe>   
+            
+            
+          </div> 
+          
+ 
+         
+
+          <div class="call-card mt-lg-4 mb-5 " (click)="copyPhoneNumber()">
+            <div class="text-start">
+              <i class="bi bi-telephone-outbound-fill  ms-2" style="color: orangered;"></i> <span class="ms-2  fw-bold"> +91 9691000264</span>
+            </div> 
+
+            <div *ngIf="isCopied" class=" text-start mt-3">
+              <span style="color: rgb(45, 163, 18);"> Number copied!</span>
+            </div> 
+
+          </div>
+
+          
+          
+          
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 mt-md-2">
+          <form *ngIf="myForm" [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <div class="form-group text-start">
+              <label class="pt-1 fw-bold" style="color: rgb(241, 88, 33)"
+                >Name:</label>
+              <input
+                class="form-control"
+                type="text"
+                
+                formControlName="name"
+                [ngClass]="{
+                  'is-invalid':
+                    myForm.get('name')?.invalid && myForm.get('name')?.touched,
+                  'is-valid': myForm.get('name')?.valid
+                }"
+              />
+              <div   
+                *ngIf="
+                  myForm.get('name')?.invalid && myForm.get('name')?.touched
+                "
+                class="text-danger"
+              >
+                Name can't be empty 
+              </div>
+            </div>
+
+            <div class="form-group text-start mt-3">
+              <label class="pt-1 fw-bold" style="color: rgb(241, 88, 33)"
+                >Email:</label
+              >
+              <input
+                class="form-control"
+                type="email"
+                
+                formControlName="email"
+                [ngClass]="{
+                  'is-invalid':
+                    myForm.get('email')?.invalid &&
+                    myForm.get('email')?.touched,
+                  'is-valid': myForm.get('email')?.valid
+                }"
+              />
+
+              <div
+                *ngIf="
+                  myForm.get('email')?.invalid && myForm.get('email')?.touched
+                "
+                class="text-danger"
+              >
+                Incorrect email
+              </div>
+            </div>
+
+            <div class="form-group mt-3 text-start">
+              <label
+                for="form_message" 
+                class="pt-1 fw-bold"
+                style="color: rgb(241, 88, 33)"
+                >Message:<span class="gl-form-asterisk"></span
+              ></label>
+              <textarea
+                id="form_message"
+                name="message"
+                cols="5"
+                rows="5"
+               
+                class="form-control"
+                formControlName="message"
+                [ngClass]="{
+                  'is-invalid':
+                    myForm.get('message')?.invalid &&
+                    myForm.get('message')?.touched,
+                  'is-valid': myForm.get('message')?.valid
+                }"
+              ></textarea>
+              <div 
+                *ngIf="
+                  myForm.get('message')?.invalid &&
+                  myForm.get('message')?.touched
+                "
+                class="text-danger"
+              >
+                Message can't be empty
+              </div>
+            </div>
+
+            <div class="mt-3 d-flex justify-content-center">
+              <button
+                class="custom-button"
+                type="submit"
+                [disabled]="!myForm.valid"
+                [class.loading]="isLoading"
+                [class.sent]="isSent"
+              >
+                <span *ngIf="!isLoading && !isSent">Send Message</span>
+                <div *ngIf="isLoading" class="loading-circle"></div>
+                <span *ngIf="isSent"
+                  >Sent <i class="ms-1 bi bi-check2-circle"></i
+                ></span>
+              </button>
+
+              <div *ngIf="showModal">
+                <div class="backdrop" (click)="onClose()"></div>
+                <div class="alert-box p-4 rounded">
+                  <div class="alert-message text-center">
+                    <h2 class="fs-5 fw-bold mb-3 text-success">
+                      Thank You for Visiting My Portfolio!
+                    </h2>
+                    <p class="mb-3 fst-italic">
+                      Your message has been received. I'll get back to you soon
+                      with a reply or feedback.
+                    </p>
+                    <img
+                      style="height: 200px"
+                      src="assets\images\cartoon-boy.jpg"
+                      alt="Thanks Image"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                  <div
+                    class="alert-box-action d-flex justify-content-center mt-3"
+                  >
+                    <button class="btn btn-danger" (click)="onClose()">
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div> 
+    </section>
+  </div>
+</section>
+
+<div class="footer-basic " style="background-color: rgb(250, 124, 34)">
+  <footer>
+    <div class="social">
+      <a><i class="bi bi-instagram" (click)="onInsta()"></i></a
+      ><a><i class="bi bi-linkedin" (click)="onClickLinkedIn()"></i></a
+      ><a><i class="bi bi-google"></i></a><a><i class="bi bi-facebook"></i></a>
+    </div>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#home">Home</a></li>
+      <li class="list-inline-item"><a href="#about">About</a></li>
+      <li class="list-inline-item"><a href="#project">Project</a></li>
+      <li class="list-inline-item"><a href="#contact">Contact</a></li>
+    </ul> 
+    <p class="copyright">
+      Handcrafted by me
+      <span><i class="bi bi-heart-fill text-danger"></i></span>
+    </p>
+  </footer>
+</div>
